@@ -27,7 +27,8 @@ namespace Практическая_работа_4_Краснова_Солодо�
 
         public void Calculate(double x, double y, double z)
         {
-
+            double res = ((2 * Math.Cos(x - (Math.PI / 6))) / (0.5 + Math.Pow(Math.Sin(y), 2))) * (1 + ((Math.Pow(z, 2) / (3 - Math.Pow(z, 2) / 5))));
+            answerTB.Text = res.ToString();
         }
 
         private void CalculateBtn_Click(object sender, RoutedEventArgs e)
@@ -51,11 +52,12 @@ namespace Практическая_работа_4_Краснова_Солодо�
             xTB.Clear();
             yTB.Clear();
             zTB.Clear();
+            answerTB.Clear();
         }
 
         private void NextBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Page2());
         }
     }
 }
