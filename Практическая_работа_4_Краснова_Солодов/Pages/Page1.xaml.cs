@@ -33,18 +33,24 @@ namespace Практическая_работа_4_Краснова_Солодо�
 
         private void CalculateBtn_Click(object sender, RoutedEventArgs e)
         {
-            bool xparce = double.TryParse(xTB.Text, out var numx);
-            bool yparce = double.TryParse(yTB.Text, out var numy);
-            bool zparce = double.TryParse(zTB.Text, out var numz);
-            if (xparce && yparce && zparce)
-            {
-                MessageBox.Show(":)");
-                Calculate(numx, numy, numz);
+            if (xTB.Text != "" && yTB.Text != "" && zTB.Text != "")
+            { 
+                if (xTB.Text.Contains(".")) { xTB.Text = xTB.Text.Replace(".", ","); }
+                if (yTB.Text.Contains(".")) { yTB.Text = yTB.Text.Replace(".", ","); }
+                if (zTB.Text.Contains(".")) { zTB.Text = zTB.Text.Replace(".", ","); }
+
+                bool xparce = double.TryParse(xTB.Text, out var numx);
+                bool yparce = double.TryParse(yTB.Text, out var numy);
+                bool zparce = double.TryParse(zTB.Text, out var numz);
+
+                if (xparce && yparce && zparce)
+                {
+                    MessageBox.Show(":)");
+                    Calculate(numx, numy, numz);
+                }
+                else { MessageBox.Show("Введено не число!"); }
             }
-            else
-            {
-                MessageBox.Show("Введено не число!");
-            }
+            else { MessageBox.Show("Заполните x, y и z!"); }
         }
 
         private void ClearBtn_Click(object sender, RoutedEventArgs e)

@@ -9,6 +9,72 @@
       Title="Page2">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="130*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Картинка формулы -->
+        <Image Source="/Images/formula.jpg" Grid.Row="0" Grid.ColumnSpan="2"/>
+
+        <!-- Пердюля <3 -->
+        <Image Source="/Images/perdulia.jpg" Grid.Column="1" Grid.Row="1" Margin="10" Opacity="1" Height="240" Width="270" Stretch="UniformToFill"/>
+
+        <Image x:Name="perdulia_comm_image" Source="/Images/comm_v10.png"  Grid.RowSpan="2" Margin="152,29,-14,97" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Visibility="Hidden">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-12.828"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+
+        <StackPanel Grid.Row="1" Margin="10,10,0,0" Grid.Column="0">
+
+            <!-- Поле X -->
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="x: " Height="20"/>
+                <TextBox x:Name="xInput" Text="" Width="100" Height="20" Margin="63,0,0,0"/>
+            </StackPanel>
+
+            <!-- Поле Y -->
+            <StackPanel Orientation="Horizontal"  Margin="0,5,0,0">
+                <TextBlock Text="y: " Height="20"/>
+                <TextBox x:Name="yInput" Text="" Width="100" Height="20" Margin="63,0,0,0"/>
+            </StackPanel>
+
+            <!-- Выбор функции -->
+            <StackPanel Orientation="Vertical" Margin="74,5,0,0" x:Name="funcs">
+                <RadioButton Content="sh(x)" VerticalAlignment="Center" x:Name="var1"/>
+                <RadioButton Content="x^2" VerticalAlignment="Center" x:Name="var2"/>
+                <RadioButton Content="e^x" VerticalAlignment="Center" x:Name="var3"/>
+            </StackPanel>
+
+            <!-- Поле ответа -->
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                <TextBlock Text="Ответ: "/>
+                <TextBox x:Name="answer" Text="" Width="100" Height="20" Margin="37,0,0,0" IsReadOnly="True"/>
+            </StackPanel>
+
+            <!-- Кнопочки -->
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <Button x:Name="countBtn" Content="Посчитать" Width="75" Click="countBtn_Click"/>
+                <Button x:Name="clearBtn" Content="Очистить" Width="75" Margin="25,0,0,0" Click="clearBtn_Click"/>
+            </StackPanel>
+
+            <!-- Назад/Вперёд -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Margin="0,75,0,0">
+                <Button x:Name="BackBtn" Content="Назад" Width="100" Margin="0,0,15,0" Click="BackBtn_Click"/>
+                <Button x:Name="NextBtn" Content="Далее" Width="100" Click="NextBtn_Click"/>
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
 </Page>

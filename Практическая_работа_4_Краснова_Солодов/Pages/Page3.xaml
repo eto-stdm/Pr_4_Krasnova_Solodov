@@ -4,11 +4,46 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Практическая_работа_4_Краснова_Солодов.Pages"
+      xmlns:charts="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page3">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="/Images/pic3.PNG" Height="150" Width="700" Margin="0, 0, 0, 0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
+        <StackPanel Margin="0, 0, 0, 0" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2">
+            <TextBlock Text="Рекомендуется вводить отриц. числа!" Margin="40, 10, 10, 10"/>
+            <StackPanel Orientation="Horizontal" Margin="120, 0, 0, 0">
+                <TextBlock Text="x" Margin="10, 10, 10, 10"/>
+                <TextBox x:Name="xTB" Width="100" Margin="10, 10, 10, 10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="95, 0, 0, 0">
+                <TextBlock Text="Ответ" Margin="10, 10, 10, 10"/>
+                <TextBox TextWrapping="Wrap" x:Name="answerTB" IsReadOnly="True" Width="100" Height="100" Margin="10, 10, 10, 10"/>
+            </StackPanel>
+            <Button x:Name="CalculateBtn" Content="Вычислить" Width="80" Margin="160, 10, 10, 10" Click="CalculateBtn_Click"/>
+            <Button x:Name="ClearBtn" Content="Очистить" Width="80" Margin="160, 10, 10, 10" Click="ClearBtn_Click"/>
+            <Button x:Name="NextBtn" Content="Предыдущая страница" Width="150" Margin="90, 10, 10, 10" Click="BackBtn_Click"/>
+        </StackPanel>
+        <WindowsFormsHost Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <charts:Chart x:Name="ChartFunc">
+                <charts:Chart.Legends>
+                    <charts:Legend>
+
+                    </charts:Legend>
+                </charts:Chart.Legends>
+            </charts:Chart>
+        </WindowsFormsHost>
+
     </Grid>
 </Page>
