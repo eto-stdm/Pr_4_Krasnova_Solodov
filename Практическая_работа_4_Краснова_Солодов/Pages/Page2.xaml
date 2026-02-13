@@ -19,10 +19,10 @@
         </Grid.RowDefinitions>
 
         <!-- Картинка формулы -->
-        <Image Source="/Images/formula.jpg" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <Image Source="/Images/formula.jpg" Grid.Row="0" Grid.ColumnSpan="2" ToolTip="Это формула типо."/>
 
         <!-- Пердюля <3 -->
-        <Image Source="/Images/perdulia.jpg" Grid.Column="1" Grid.Row="1" Margin="10" Opacity="1" Height="240" Width="270" Stretch="UniformToFill"/>
+        <Image Source="/Images/perdulia.jpg" Grid.Column="1" Grid.Row="1" Margin="10" Opacity="1" Height="240" Width="270" Stretch="UniformToFill" ToolTip="Это пердюля, он очень рад тебя видеть!"/>
 
         <Image x:Name="perdulia_comm_image" Source="/Images/comm_v10.png"  Grid.RowSpan="2" Margin="152,29,-14,97" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Visibility="Hidden">
             <Image.RenderTransform>
@@ -41,13 +41,13 @@
             <!-- Поле X -->
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="x: " Height="20"/>
-                <TextBox x:Name="xInput" Text="" Width="100" Height="20" Margin="63,0,0,0"/>
+                <TextBox x:Name="xInput" Text="" Width="100" Height="20" Margin="63,0,0,0" ToolTip="Введите здесь значение x"/>
             </StackPanel>
 
             <!-- Поле Y -->
             <StackPanel Orientation="Horizontal"  Margin="0,5,0,0">
                 <TextBlock Text="y: " Height="20"/>
-                <TextBox x:Name="yInput" Text="" Width="100" Height="20" Margin="63,0,0,0"/>
+                <TextBox x:Name="yInput" Text="" Width="100" Height="20" Margin="63,0,0,0" ToolTip="Введите здесь значение y"/>
             </StackPanel>
 
             <!-- Выбор функции -->
@@ -60,7 +60,7 @@
             <!-- Поле ответа -->
             <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
                 <TextBlock Text="Ответ: "/>
-                <TextBox x:Name="answer" Text="" Width="100" Height="20" Margin="37,0,0,0" IsReadOnly="True"/>
+                <TextBox x:Name="answer" Text="" Width="100" Height="20" Margin="37,0,0,0" IsReadOnly="True" ToolTip="Здесь может быть ответ"/>
             </StackPanel>
 
             <!-- Кнопочки -->
