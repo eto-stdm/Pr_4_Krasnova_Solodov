@@ -9,23 +9,23 @@
       Title="Page1">
 
     <StackPanel>
-        <Image Source="/Images/pic1.PNG" Height="150" Width="700" Margin="0, 20, 0, 0"/>
+        <Image Source="/Images/pic1.PNG" Height="150" Width="700" Margin="0, 20, 0, 0" ToolTip="Формула"/>
         <StackPanel Orientation="Horizontal" Margin="60, 30, 0, 0">
             <TextBlock Text="x" Margin="10, 10, 10, 10"/>
-            <TextBox x:Name="xTB" Width="200" Margin="10, 10, 10, 10"/>
+            <TextBox x:Name="xTB" Width="200" Margin="10, 10, 10, 10" ToolTip="Введите здесь значение x"/>
             <Button x:Name="CalculateBtn" Content="Вычислить" Width="80" Margin="10, 10, 10, 10" Click="CalculateBtn_Click"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="60, 0, 0, 0">
             <TextBlock Text="y" Margin="10, 10, 10, 10"/>
-            <TextBox x:Name="yTB" Width="200" Margin="10, 10, 10, 10"/>
+            <TextBox x:Name="yTB" Width="200" Margin="10, 10, 10, 10" ToolTip="Введите здесь значение y"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="60, 0, 0, 0">
             <TextBlock Text="z" Margin="10, 10, 10, 10"/>
-            <TextBox x:Name="zTB" Width="200" Margin="10, 10, 10, 10"/>
+            <TextBox x:Name="zTB" Width="200" Margin="10, 10, 10, 10" ToolTip="Введите здесь значение z"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="60, 0, 0, 0">
             <TextBlock Text="Ответ" Margin="10, 10, 10, 10"/>
-            <TextBox x:Name="answerTB" IsReadOnly="True" Width="200" Margin="10, 10, 10, 10"/>
+            <TextBox x:Name="answerTB" IsReadOnly="True" Width="200" Margin="10, 10, 10, 10" ToolTip="Здесь будет выведен ответ"/>
             <Button x:Name="ClearBtn" Content="Очистить" Width="80" Margin="10, 10, 10, 10" Click="ClearBtn_Click"/>
             <Button x:Name="NextBtn" Content="Следующая страница" Width="150" Margin="180, 10, 10, 10" Click="NextBtn_Click"/>
         </StackPanel>

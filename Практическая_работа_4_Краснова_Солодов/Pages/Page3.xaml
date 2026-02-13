@@ -20,16 +20,16 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Image Source="/Images/pic3.PNG" Height="150" Width="700" Margin="0, 0, 0, 0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
+        <Image Source="/Images/pic3.PNG" Height="150" Width="700" Margin="0, 0, 0, 0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" ToolTip="Формула"/>
         <StackPanel Margin="0, 0, 0, 0" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2">
             <TextBlock Text="Рекомендуется вводить отриц. числа!" Margin="40, 10, 10, 10"/>
             <StackPanel Orientation="Horizontal" Margin="120, 0, 0, 0">
                 <TextBlock Text="x" Margin="10, 10, 10, 10"/>
-                <TextBox x:Name="xTB" Width="100" Margin="10, 10, 10, 10"/>
+                <TextBox x:Name="xTB" Width="100" Margin="10, 10, 10, 10" ToolTip="Введите здесь значение x"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="95, 0, 0, 0">
                 <TextBlock Text="Ответ" Margin="10, 10, 10, 10"/>
-                <TextBox TextWrapping="Wrap" x:Name="answerTB" IsReadOnly="True" Width="100" Height="100" Margin="10, 10, 10, 10"/>
+                <TextBox TextWrapping="Wrap" x:Name="answerTB" IsReadOnly="True" Width="100" Height="100" Margin="10, 10, 10, 10" ToolTip="Здесь будет выведен ответ"/>
             </StackPanel>
             <Button x:Name="CalculateBtn" Content="Вычислить" Width="80" Margin="160, 10, 10, 10" Click="CalculateBtn_Click"/>
             <Button x:Name="ClearBtn" Content="Очистить" Width="80" Margin="160, 10, 10, 10" Click="ClearBtn_Click"/>

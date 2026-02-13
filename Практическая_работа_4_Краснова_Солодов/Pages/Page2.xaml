@@ -52,9 +52,9 @@
 
             <!-- Выбор функции -->
             <StackPanel Orientation="Vertical" Margin="74,5,0,0" x:Name="funcs">
-                <RadioButton Content="sh(x)" VerticalAlignment="Center" x:Name="var1"/>
-                <RadioButton Content="x^2" VerticalAlignment="Center" x:Name="var2"/>
-                <RadioButton Content="e^x" VerticalAlignment="Center" x:Name="var3"/>
+                <RadioButton Content="sh(x)" VerticalAlignment="Center" x:Name="var1" ToolTip="Гиперболический синус"/>
+                <RadioButton Content="x^2" VerticalAlignment="Center" x:Name="var2" ToolTip="Квадратичная функция"/>
+                <RadioButton Content="e^x" VerticalAlignment="Center" x:Name="var3" ToolTip="Экспоненциальная функция"/>
             </StackPanel>
 
             <!-- Поле ответа -->
