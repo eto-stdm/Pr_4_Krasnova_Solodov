@@ -71,8 +71,13 @@
 программы. 
 
 ### Скриншоты работы приложения:
+![alt text](Images/Page1.PNG) 
+*Страница 1*
+![alt text](Images/Page2.PNG) 
 
+![alt text](Images/Page2perd.PNG) 
 
+![alt text](Images/Page3.PNG)
 
 ### Скриншот окна "Обозреватель тестов"
 
