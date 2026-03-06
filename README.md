@@ -72,7 +72,8 @@
 
 ### Скриншоты работы приложения:
 ![alt text](Images/Page1.PNG) 
-*Страница 1*
+<p align="center">*Страница 1*<p/>
+<br/>
 ![alt text](Images/Page2.PNG) 
 
 ![alt text](Images/Page2perd.PNG) 
