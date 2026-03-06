@@ -71,14 +71,13 @@
 программы. 
 
 ### Скриншоты работы приложения:
-![alt text](Images/Page1.PNG) 
-<p align="center">*Страница 1*<p/>
-<br/>
-![alt text](Images/Page2.PNG) 
+![Страница 1](Images/Page1.PNG) 
 
-![alt text](Images/Page2perd.PNG) 
+![Страница 2](Images/Page2.PNG) 
 
-![alt text](Images/Page3.PNG)
+![пердюля](Images/Page2perd.PNG) 
+
+![Страница 3](Images/Page3.PNG)
 
 ### Скриншот окна "Обозреватель тестов"
 
