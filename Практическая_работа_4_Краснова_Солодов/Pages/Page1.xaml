@@ -11,16 +11,16 @@
     <StackPanel>
         <Image Source="/Images/pic1.PNG" Height="150" Width="700" Margin="0, 20, 0, 0" ToolTip="Формула"/>
         <StackPanel Orientation="Horizontal" Margin="60, 30, 0, 0">
-            <TextBlock Text="x" Margin="10, 10, 10, 10"/>
+            <TextBlock Text="x" Width="31" Margin="10, 10, 10, 10" TextAlignment="Right"/>
             <TextBox x:Name="xTB" Width="200" Margin="10, 10, 10, 10" ToolTip="Введите здесь значение x"/>
             <Button x:Name="CalculateBtn" Content="Вычислить" Width="80" Margin="10, 10, 10, 10" Click="CalculateBtn_Click"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="60, 0, 0, 0">
-            <TextBlock Text="y" Margin="10, 10, 10, 10"/>
+            <TextBlock Text="y" Width="31" Margin="10, 10, 10, 10" TextAlignment="Right"/>
             <TextBox x:Name="yTB" Width="200" Margin="10, 10, 10, 10" ToolTip="Введите здесь значение y"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="60, 0, 0, 0">
-            <TextBlock Text="z" Margin="10, 10, 10, 10"/>
+            <TextBlock Text="z" Width="31" Margin="10, 10, 10, 10" TextAlignment="Right"/>
             <TextBox x:Name="zTB" Width="200" Margin="10, 10, 10, 10" ToolTip="Введите здесь значение z"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="60, 0, 0, 0">

@@ -29,11 +29,11 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="95, 0, 0, 0">
                 <TextBlock Text="Ответ" Margin="10, 10, 10, 10"/>
-                <TextBox TextWrapping="Wrap" x:Name="answerTB" IsReadOnly="True" Width="100" Height="100" Margin="10, 10, 10, 10" ToolTip="Здесь будет выведен ответ"/>
+                <TextBox TextWrapping="Wrap" x:Name="answerTB" IsReadOnly="True" Width="100" Height="100" Margin="10, 10, 10, 5" ToolTip="Здесь будет выведен ответ"/>
             </StackPanel>
-            <Button x:Name="CalculateBtn" Content="Вычислить" Width="80" Margin="160, 10, 10, 10" Click="CalculateBtn_Click"/>
-            <Button x:Name="ClearBtn" Content="Очистить" Width="80" Margin="160, 10, 10, 10" Click="ClearBtn_Click"/>
-            <Button x:Name="NextBtn" Content="Предыдущая страница" Width="150" Margin="90, 10, 10, 10" Click="BackBtn_Click"/>
+            <Button x:Name="CalculateBtn" Content="Вычислить" Width="80" Margin="160, 10, 10, 5" Click="CalculateBtn_Click"/>
+            <Button x:Name="ClearBtn" Content="Очистить" Width="80" Margin="160, 10, 10, 5" Click="ClearBtn_Click"/>
+            <Button x:Name="NextBtn" Content="Предыдущая страница" Width="150" Margin="90, 10, 10, 5" Click="BackBtn_Click"/>
         </StackPanel>
         <WindowsFormsHost Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <charts:Chart x:Name="ChartFunc">

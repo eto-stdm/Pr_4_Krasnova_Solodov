@@ -36,43 +36,45 @@
         </Image>
 
 
-        <StackPanel Grid.Row="1" Margin="10,10,0,0" Grid.Column="0">
+        <StackPanel Grid.Row="1" Margin="10,20,0,0" Grid.Column="0">
+            
+            <StackPanel HorizontalAlignment="Center">
+                <!-- Поле X -->
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="x: " Height="20"/>
+                    <TextBox x:Name="xInput" Text="" Width="100" Height="20" Margin="63,0,0,0" ToolTip="Введите здесь значение x"/>
+                </StackPanel>
 
-            <!-- Поле X -->
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="x: " Height="20"/>
-                <TextBox x:Name="xInput" Text="" Width="100" Height="20" Margin="63,0,0,0" ToolTip="Введите здесь значение x"/>
+                <!-- Поле Y -->
+                <StackPanel Orientation="Horizontal"  Margin="0,5,0,0">
+                    <TextBlock Text="y: " Height="20"/>
+                    <TextBox x:Name="yInput" Text="" Width="100" Height="20" Margin="63,0,0,0" ToolTip="Введите здесь значение y"/>
+                </StackPanel>
+
+                <!-- Выбор функции -->
+                <StackPanel Orientation="Vertical" Margin="74,5,0,0" x:Name="funcs">
+                    <RadioButton Content="sh(x)" VerticalAlignment="Center" x:Name="var1" ToolTip="Гиперболический синус"/>
+                    <RadioButton Content="x^2" VerticalAlignment="Center" x:Name="var2" ToolTip="Квадратичная функция"/>
+                    <RadioButton Content="e^x" VerticalAlignment="Center" x:Name="var3" ToolTip="Экспоненциальная функция"/>
+                </StackPanel>
+
+                <!-- Поле ответа -->
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
+                    <TextBlock Text="Ответ: "/>
+                    <TextBox x:Name="answer" Text="" Width="100" Height="20" Margin="37,0,0,0" IsReadOnly="True" ToolTip="Здесь может быть ответ"/>
+                </StackPanel>
+
+                <!-- Кнопочки -->
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <Button x:Name="countBtn" Content="Посчитать" Width="75" Click="countBtn_Click"/>
+                    <Button x:Name="clearBtn" Content="Очистить" Width="75" Margin="25,0,0,0" Click="clearBtn_Click"/>
+                </StackPanel>
             </StackPanel>
-
-            <!-- Поле Y -->
-            <StackPanel Orientation="Horizontal"  Margin="0,5,0,0">
-                <TextBlock Text="y: " Height="20"/>
-                <TextBox x:Name="yInput" Text="" Width="100" Height="20" Margin="63,0,0,0" ToolTip="Введите здесь значение y"/>
-            </StackPanel>
-
-            <!-- Выбор функции -->
-            <StackPanel Orientation="Vertical" Margin="74,5,0,0" x:Name="funcs">
-                <RadioButton Content="sh(x)" VerticalAlignment="Center" x:Name="var1" ToolTip="Гиперболический синус"/>
-                <RadioButton Content="x^2" VerticalAlignment="Center" x:Name="var2" ToolTip="Квадратичная функция"/>
-                <RadioButton Content="e^x" VerticalAlignment="Center" x:Name="var3" ToolTip="Экспоненциальная функция"/>
-            </StackPanel>
-
-            <!-- Поле ответа -->
-            <StackPanel Orientation="Horizontal" Margin="0,5,0,0" >
-                <TextBlock Text="Ответ: "/>
-                <TextBox x:Name="answer" Text="" Width="100" Height="20" Margin="37,0,0,0" IsReadOnly="True" ToolTip="Здесь может быть ответ"/>
-            </StackPanel>
-
-            <!-- Кнопочки -->
-            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
-                <Button x:Name="countBtn" Content="Посчитать" Width="75" Click="countBtn_Click"/>
-                <Button x:Name="clearBtn" Content="Очистить" Width="75" Margin="25,0,0,0" Click="clearBtn_Click"/>
-            </StackPanel>
-
+            
             <!-- Назад/Вперёд -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Margin="0,75,0,0">
-                <Button x:Name="BackBtn" Content="Назад" Width="100" Margin="0,0,15,0" Click="BackBtn_Click"/>
-                <Button x:Name="NextBtn" Content="Далее" Width="100" Click="NextBtn_Click"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Margin="0,65,0,0">
+                <Button x:Name="BackBtn" Content="Назад" Width="75" Margin="0,0,25,0" Click="BackBtn_Click"/>
+                <Button x:Name="NextBtn" Content="Далее" Width="75" Click="NextBtn_Click"/>
             </StackPanel>
 
         </StackPanel>
