@@ -25,6 +25,30 @@ namespace Практическая_работа_4_Краснова_Солодо�
             InitializeComponent();
         }
 
+        public bool IsAbleToCalculate(string x, string y, string z)
+        {
+
+            if (x != "" && y != "" && z != "")
+            {
+                if (x.Contains(".")) { x = x.Replace(".", ","); }
+                if (y.Contains(".")) { y = y.Replace(".", ","); }
+                if (z.Contains(".")) { z = z.Replace(".", ","); }
+
+                bool xparce = double.TryParse(x, out var numx);
+                bool yparce = double.TryParse(y, out var numy);
+                bool zparce = double.TryParse(z, out var numz);
+
+                if (xparce && yparce && zparce)
+                {
+                    MessageBox.Show(":)");
+                    Calculate(numx, numy, numz);
+                    return true;
+                }
+                else { MessageBox.Show("Введено не число!"); return false; }
+            }
+            else { MessageBox.Show("Заполните x, y и z!"); return false; }
+        }
+
         public void Calculate(double x, double y, double z)
         {
             double res = ((2 * Math.Cos(x - (Math.PI / 6))) / (0.5 + Math.Pow(Math.Sin(y), 2))) * (1 + ((Math.Pow(z, 2) / (3 - Math.Pow(z, 2) / 5))));
@@ -33,24 +57,7 @@ namespace Практическая_работа_4_Краснова_Солодо�
 
         private void CalculateBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (xTB.Text != "" && yTB.Text != "" && zTB.Text != "")
-            { 
-                if (xTB.Text.Contains(".")) { xTB.Text = xTB.Text.Replace(".", ","); }
-                if (yTB.Text.Contains(".")) { yTB.Text = yTB.Text.Replace(".", ","); }
-                if (zTB.Text.Contains(".")) { zTB.Text = zTB.Text.Replace(".", ","); }
-
-                bool xparce = double.TryParse(xTB.Text, out var numx);
-                bool yparce = double.TryParse(yTB.Text, out var numy);
-                bool zparce = double.TryParse(zTB.Text, out var numz);
-
-                if (xparce && yparce && zparce)
-                {
-                    MessageBox.Show(":)");
-                    Calculate(numx, numy, numz);
-                }
-                else { MessageBox.Show("Введено не число!"); }
-            }
-            else { MessageBox.Show("Заполните x, y и z!"); }
+            IsAbleToCalculate(xTB.Text, yTB.Text, zTB.Text);
         }
 
         private void ClearBtn_Click(object sender, RoutedEventArgs e)
