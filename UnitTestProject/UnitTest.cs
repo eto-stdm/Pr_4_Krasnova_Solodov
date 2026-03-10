@@ -8,49 +8,73 @@ namespace UnitTestProject
     public class UnitTest
     {
         [TestMethod]
-        public void Page1_1()
+        public void Page1_RightData()
         {
             var page = new Page1();
             Assert.IsTrue(page.Calculate("1", "2", "4"));
         }
         [TestMethod]
-        public void Page1_2()
+        public void Page1_BadData()
         {
             var page = new Page1();
             Assert.IsFalse(page.Calculate("wewedw", "2", "4"));
         }
         [TestMethod]
 
-        public void Page2_1()
+        public void Page2_RightDataVar1()
         {
-            var page = new Page3();
-            Assert.IsFalse(page.IsAbleToCalculate("32"));
+            var page = new Page2();
+            Assert.IsTrue(page.Calculate("1", "1", "var1"));
         }
 
         [TestMethod]
-        public void Page2_2()
+        public void Page2_RightDataVar2()
         {
-            var page = new Page3();
-            Assert.IsFalse(page.IsAbleToCalculate("32"));
+            var page = new Page2();
+            Assert.IsTrue(page.Calculate("1", "1", "var2"));
         }
         [TestMethod]
-        public void Page2_3()
+        public void Page2_RightDataVar3()
         {
-            var page = new Page3();
-            Assert.IsFalse(page.IsAbleToCalculate("32"));
+            var page = new Page2();
+            Assert.IsTrue(page.Calculate("1", "1", "var3"));
+        }
+        [TestMethod]
+        public void Page2_BadData()
+        {
+            var page = new Page2();
+            Assert.IsFalse(page.Calculate("e", "1", "var3"));
+        }
+        [TestMethod]
+        public void Page2_LongData()
+        {
+            var page = new Page2();
+            Assert.IsFalse(page.Calculate("223413223413223413223413223413223413223413223413223413223413223413223413223413223413223413223413223413223413223413", "1", "var3"));
         }
 
         [TestMethod]
-        public void Page3_1()
+        public void Page3_RightData()
         {
             var page = new Page3();
-            Assert.IsFalse(page.IsAbleToCalculate("32"));
+            Assert.IsTrue(page.Calculate("32"));
         }
         [TestMethod]
-        public void Page3_2()
+        public void Page3_BadData()
         {
             var page = new Page3();
-            Assert.IsFalse(page.IsAbleToCalculate("exw"));
+            Assert.IsFalse(page.Calculate("exw"));
+        }
+        [TestMethod]
+        public void Page3_OverflowException()
+        {
+            var page = new Page3();
+            Assert.IsFalse(page.Calculate("-1"));
+        }
+        [TestMethod]
+        public void Page3_DivideByZeroException()
+        {
+            var page = new Page3();
+            Assert.IsFalse(page.Calculate("0"));
         }
     }
 }
